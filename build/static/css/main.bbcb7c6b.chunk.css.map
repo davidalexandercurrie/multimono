@@ -1,1 +1,0 @@
-{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA,uBAIE,WAAY,CACZ,UAAW,CACX,SAAU,CACV,QAAS,CACT,kBACF,CACA,YACE,aACF","file":"main.bbcb7c6b.chunk.css","sourcesContent":["html,\nbody,\n#root,\ncanvas {\n  height: 100%;\n  width: 100%;\n  padding: 0;\n  margin: 0;\n  background: #6262ff;\n}\n.playButton {\n  font-size: 3em;\n}\n"]}
