@@ -55,7 +55,7 @@ function App() {
   return (
     <>
       <button className="playButton" onClick={onClick}>
-        PLAY
+        //PLAY//
       </button>
       {play && (
         <Canvas camera={{ position: [0, 0, 0.5] }}>
