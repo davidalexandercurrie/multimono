@@ -26,7 +26,18 @@ const Controls = props => {
   const { camera, gl } = useThree()
   const ref = useRef()
   useFrame(() => ref.current.update())
-  return <orbitControls ref={ref} target={[0, 0, 0]} enableDamping maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 3} args={[camera, gl.domElement]} />
+
+  return (
+    <orbitControls
+      ref={ref}
+      target={[0, 0, 0]}
+      enableDamping
+      maxPolarAngle={Math.PI / 2}
+      minPolarAngle={Math.PI / 3}
+      args={[camera, gl.domElement]}
+      {...props}
+    />
+  )
 }
 
 function Sound({ url }) {
@@ -72,7 +83,7 @@ function App() {
             ))}
           </Suspense>
 
-          <Controls enableKeys={true} autoRotate />
+          <Controls enableKeys={true} zoomSpeed={0.25} />
         </Canvas>
       )}
     </>
