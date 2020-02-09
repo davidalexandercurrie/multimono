@@ -11,18 +11,18 @@ import { TextGeometry } from 'three'
 extend({ OrbitControls })
 
 const tracks = [
-  { url: '/Audio/12xmonobrowser-001.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5 },
-  { url: '/Audio/12xmonobrowser-002.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5 },
-  { url: '/Audio/12xmonobrowser-003.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5 },
-  { url: '/Audio/12xmonobrowser-004.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5 },
-  { url: '/Audio/12xmonobrowser-005.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5 },
-  { url: '/Audio/12xmonobrowser-006.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5 },
-  { url: '/Audio/12xmonobrowser-007.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5 },
-  { url: '/Audio/12xmonobrowser-008.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5 },
-  { url: '/Audio/12xmonobrowser-009.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5 },
-  { url: '/Audio/12xmonobrowser-010.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5 },
-  { url: '/Audio/12xmonobrowser-011.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5 },
-  { url: '/Audio/12xmonobrowser-012.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5 }
+  { id: 1, url: '/Audio/12xmonobrowser-001.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 2, url: '/Audio/12xmonobrowser-002.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 3, url: '/Audio/12xmonobrowser-003.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 4, url: '/Audio/12xmonobrowser-004.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 5, url: '/Audio/12xmonobrowser-005.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 6, url: '/Audio/12xmonobrowser-006.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 7, url: '/Audio/12xmonobrowser-007.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 8, url: '/Audio/12xmonobrowser-008.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 9, url: '/Audio/12xmonobrowser-009.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 10, url: '/Audio/12xmonobrowser-010.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 11, url: '/Audio/12xmonobrowser-011.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 12, url: '/Audio/12xmonobrowser-012.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 }
 ]
 
 const Controls = props => {
@@ -63,7 +63,7 @@ function Sound({ url }) {
 const Loading = () => (
   <Dom>
     <div className="loading">
-      LOADING...
+      <p>LOADING...</p>
       <ClipLoader className="spinner" size={150} color={'black'} />
     </div>
   </Dom>
@@ -84,18 +84,20 @@ function App() {
       <Canvas camera={{ position: [0, 0, 5] }}>
         {!play && (
           <>
-            {/* <TextGeometry attach="geometry" args={['asdfasdfasd', {}]} /> */}
-            <Suspense fallback={null}>
-              <Dom position={[100, -50, 100]}>
-                <button className="playButton" onClick={onClick}>
-                  <code>|> 12xMono - David Currie |></code>
-                </button>
-              </Dom>
-            </Suspense>
+            <Dom position={[100, -50, 100]}>
+              <button className="playButton" onClick={onClick}>
+                <code>|> 12xMono - David Currie |></code>
+              </button>
+            </Dom>
           </>
         )}
         {play && (
           <Suspense fallback={<Loading />}>
+            {/* {
+              <Dom position={[0, 0, 0]}>
+                <p>play</p>
+              </Dom>
+            } */}
             {showControls && (
               <Dom className="controls" position={[100, 0, 100]}>
                 <p>
@@ -106,13 +108,13 @@ function App() {
                 </p>
               </Dom>
             )}
-            <ambientLight></ambientLight>
+            <ambientLight />
             <spotLight castShadow intensity={1} angle={Math.PI / 10} position={[10, 10, 10]} shadow-mapSize-width={2048} shadow-mapSize-height={2048} />
             <spotLight intensity={0.5} castShadow position={[10, 100, 20]}></spotLight>
             <ambientLight />
             <pointLight intensity={4} />
             {tracks.map(node => (
-              <mesh position={[node.x, 0, node.z]}>
+              <mesh rotation={[0, node.rotation, 0]} key={node.id} position={[node.x, 0, node.z]}>
                 <boxBufferGeometry attach="geometry" />
                 <meshPhysicalMaterial attach="material" color="#222222" />
                 <Sound url={node.url} />

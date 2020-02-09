@@ -26,10 +26,20 @@ html .loading,
 body .loading,
 #root .loading,
 canvas .loading {
-  font-size: 3em;
+  padding: 2em;
+  font-size: 2em;
   background-color: #e4dcf1;
   border: solid purple 0.5rem;
   font-family: 'Fira Code', monospace;
+  color: white;
+  text-align: center;
+}
+
+html .spinner,
+body .spinner,
+#root .spinner,
+canvas .spinner {
+  color: white;
 }
 
 .controls {
