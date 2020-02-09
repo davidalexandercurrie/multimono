@@ -64,7 +64,7 @@ const Loading = () => (
   <Dom>
     <div className="loading">
       <p>LOADING...</p>
-      <ClipLoader className="spinner" size={300} color={'white'} />
+      <ClipLoader className="spinner" size={150} color={'black'} />
     </div>
   </Dom>
 )
@@ -93,11 +93,6 @@ function App() {
         )}
         {play && (
           <Suspense fallback={<Loading />}>
-            {/* {
-              <Dom position={[0, 0, 0]}>
-                <p>play</p>
-              </Dom>
-            } */}
             {showControls && (
               <Dom className="controls" position={[100, 0, 100]}>
                 <p>

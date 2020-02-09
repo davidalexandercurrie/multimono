@@ -28,10 +28,10 @@ body .loading,
 canvas .loading {
   padding: 0.5em;
   font-size: 2em;
-  background-color: #e4dcf1;
+  background-color: white;
   border: solid purple 0.5rem;
   font-family: 'Fira Code', monospace;
-  color: white;
+  color: black;
   text-align: center;
 }
 
