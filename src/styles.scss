@@ -9,7 +9,6 @@ code {
     font-family: 'Fira Code VF', monospace;
   }
 }
-
 html,
 body,
 #root,
@@ -20,44 +19,37 @@ canvas {
   margin: 0;
   background: #dddddd;
   font-family: 'Fira Code', monospace;
-}
 
-html .loading,
-body .loading,
-#root .loading,
-canvas .loading {
-  font-size: 3em;
-  background-color: #e4dcf1;
-  border: solid purple 0.5rem;
+  .loading {
+    font-size: 3em;
+    background-color: #e4dcf1;
+    border: solid purple 0.5rem;
+  }
+  .spinner {
+  }
 }
-
 .controls {
   background: white;
 }
-
 .closeControls {
   border: 2px solid purple;
   padding: 5px 10px;
   font-weight: bolder;
   font-size: 1em;
-}
-
-.closeControls:hover {
-  background: purple;
-  color: white;
-  cursor: cell;
-}
-
-.closeControls:active {
-  outline: none;
+  &:hover {
+    background: purple;
+    color: white;
+    cursor: cell;
+  }
+  &:active {
+    outline: none;
+  }
 }
 
 .playButton {
-  -webkit-font-variant-ligatures: common-ligatures;
-          font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures;
   font-size: 3em;
-  background-color: #e4dcf1;
-  /* Green */
+  background-color: #e4dcf1; /* Green */
   border: solid black 0.5rem;
   color: black;
   padding: 15px 32px;
@@ -65,13 +57,10 @@ canvas .loading {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  &:hover {
+    border: solid purple 0.5rem;
+  }
+  &:active {
+    outline: none;
+  }
 }
-
-.playButton:hover {
-  border: solid purple 0.5rem;
-}
-
-.playButton:active {
-  outline: none;
-}
-/*# sourceMappingURL=styles.css.map */
