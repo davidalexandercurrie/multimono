@@ -1,9 +1,11 @@
 import * as THREE from 'three'
 import ReactDOM from 'react-dom'
 import React, { Suspense, useRef, useEffect, useState } from 'react'
-import { Canvas, extend, useThree, useFrame, useLoader } from 'react-three-fiber'
+import { Dom, Canvas, extend, useThree, useFrame, useLoader } from 'react-three-fiber'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import ClipLoader from 'react-spinners/ClipLoader'
 import './styles.css'
+import { TextGeometry } from 'three'
 
 extend({ OrbitControls })
 
@@ -57,6 +59,13 @@ function Sound({ url }) {
   return <positionalAudio ref={sound} args={[listener]} />
 }
 
+const Loading = () => (
+  <Dom>
+    {/* <div class="loading">Loading...</div> */}
+    <ClipLoader className="spinner" size={150} color={'rgb(207, 192, 9)'} />
+  </Dom>
+)
+
 function App() {
   const [play, setPlay] = useState(false)
 
@@ -65,12 +74,16 @@ function App() {
   }
   return (
     <>
-      <button className="playButton" onClick={onClick}>
-        //PLAY//
-      </button>
-      {play && (
-        <Canvas camera={{ position: [0, 0, 0.5] }}>
-          <Suspense fallback={null}>
+      <Canvas camera={{ position: [0, 0, 5] }}>
+        {!play && (
+          <Dom>
+            <button className="playButton" onClick={onClick}>
+              //PLAY//
+            </button>
+          </Dom>
+        )}
+        {play && (
+          <Suspense fallback={<Loading />}>
             <ambientLight></ambientLight>
             <spotLight castShadow position={[100, 100, 20]}></spotLight>
 
@@ -82,10 +95,10 @@ function App() {
               </mesh>
             ))}
           </Suspense>
+        )}
 
-          <Controls enableKeys={true} zoomSpeed={0.25} />
-        </Canvas>
-      )}
+        <Controls enableKeys={true} zoomSpeed={0.25} />
+      </Canvas>
     </>
   )
 }
