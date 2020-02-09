@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import React, { Suspense, useRef, useEffect, useState } from 'react'
 import { Dom, Canvas, extend, useThree, useFrame, useLoader } from 'react-three-fiber'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import ClipLoader from 'react-spinners/ClipLoader'
+import ClipLoader from 'react-spinners/ScaleLoader'
 import { FaPlay } from 'react-icons/fa'
 import './styles.css'
 import { TextGeometry } from 'three'
@@ -64,7 +64,7 @@ const Loading = () => (
   <Dom>
     <div className="loading">
       <p>LOADING...</p>
-      <ClipLoader className="spinner" size={150} color={'black'} />
+      <ClipLoader className="spinner" size={300} color={'white'} />
     </div>
   </Dom>
 )
