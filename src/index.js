@@ -84,10 +84,15 @@ function App() {
       <Canvas camera={{ position: [0, 0, 5] }}>
         {!play && (
           <>
-            <Dom position={[100, -50, 100]}>
+            <Dom position={[10, -5, 0]}>
               <button className="playButton" onClick={onClick}>
-                <code>|> 12xMono - David Currie |></code>
+                <code>|> 12XMONO :: David Currie</code>
               </button>
+            </Dom>
+            <Dom position={[-1, 2, -1]}>
+              <div className="title">
+                <code>=== MULTIMONO.SPACE ===</code>
+              </div>
             </Dom>
           </>
         )}
@@ -118,7 +123,7 @@ function App() {
           </Suspense>
         )}
 
-        <Controls autoRotateSpeed={0.5} autoRotate={play ? false : true} zoomSpeed={0.25} />
+        <Controls autoRotateSpeed={5} autoRotate={play ? false : true} zoomSpeed={0.25} />
       </Canvas>
     </>
   )

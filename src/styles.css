@@ -64,9 +64,7 @@ canvas .spinner {
 }
 
 .playButton {
-  -webkit-font-variant-ligatures: common-ligatures;
-          font-variant-ligatures: common-ligatures;
-  font-size: 3em;
+  font-size: 2em;
   background-color: #e4dcf1;
   /* Green */
   border: solid black 0.5rem;
@@ -79,10 +77,23 @@ canvas .spinner {
 }
 
 .playButton:hover {
-  border: solid purple 0.5rem;
+  border: solid green 0.5rem;
 }
 
 .playButton:active {
   outline: none;
+}
+
+.title {
+  font-size: 2.5em;
+  background-color: #e4dcf1;
+  /* Green */
+  border: solid purple 0.7rem;
+  color: black;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */
