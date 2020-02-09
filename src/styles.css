@@ -29,6 +29,7 @@ canvas .loading {
   font-size: 3em;
   background-color: #e4dcf1;
   border: solid purple 0.5rem;
+  font-family: 'Fira Code', monospace;
 }
 
 .controls {

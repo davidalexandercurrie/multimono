@@ -111,14 +111,15 @@ function App() {
             <spotLight intensity={0.5} castShadow position={[10, 100, 20]}></spotLight>
             <ambientLight />
             <pointLight intensity={4} />
-            {tracks.map(node => (
-              <mesh position={[node.x, 0, node.z]}>
-                <boxBufferGeometry attach="geometry" />
-
-                <meshPhysicalMaterial attach="material" color="#222222" />
-                <Sound url={node.url} />
-              </mesh>
-            ))}
+            <Suspense fallback={null}>
+              {tracks.map(node => (
+                <mesh position={[node.x, 0, node.z]}>
+                  <boxBufferGeometry attach="geometry" />
+                  <meshPhysicalMaterial attach="material" color="#222222" />
+                  <Sound url={node.url} />
+                </mesh>
+              ))}
+            </Suspense>
           </Suspense>
         )}
 
