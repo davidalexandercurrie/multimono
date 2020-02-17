@@ -44,6 +44,7 @@ canvas .spinner {
 
 .controls {
   background: white;
+  overflow-y: none;
 }
 
 .closeControls {

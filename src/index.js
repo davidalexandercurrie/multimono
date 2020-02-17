@@ -10,19 +10,33 @@ import { TextGeometry } from 'three'
 
 extend({ OrbitControls })
 
+// const tracks = [
+//   { id: 1, url: '/Audio/12xmonobrowser-001.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 2, url: '/Audio/12xmonobrowser-002.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 3, url: '/Audio/12xmonobrowser-003.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 4, url: '/Audio/12xmonobrowser-004.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 5, url: '/Audio/12xmonobrowser-005.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 6, url: '/Audio/12xmonobrowser-006.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 7, url: '/Audio/12xmonobrowser-007.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 8, url: '/Audio/12xmonobrowser-008.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 9, url: '/Audio/12xmonobrowser-009.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 10, url: '/Audio/12xmonobrowser-010.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 11, url: '/Audio/12xmonobrowser-011.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 12, url: '/Audio/12xmonobrowser-012.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 }
+// ]
 const tracks = [
-  { id: 1, url: '/Audio/12xmonobrowser-001.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 2, url: '/Audio/12xmonobrowser-002.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 3, url: '/Audio/12xmonobrowser-003.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 4, url: '/Audio/12xmonobrowser-004.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 5, url: '/Audio/12xmonobrowser-005.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 6, url: '/Audio/12xmonobrowser-006.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 7, url: '/Audio/12xmonobrowser-007.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 8, url: '/Audio/12xmonobrowser-008.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 9, url: '/Audio/12xmonobrowser-009.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 10, url: '/Audio/12xmonobrowser-010.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 11, url: '/Audio/12xmonobrowser-011.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 12, url: '/Audio/12xmonobrowser-012.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 }
+  { id: 1, url: '/Audio-blake/BLAKE-001.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 2, url: '/Audio-blake/BLAKE-002.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 3, url: '/Audio-blake/BLAKE-003.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 4, url: '/Audio-blake/BLAKE-004.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 5, url: '/Audio-blake/BLAKE-005.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 6, url: '/Audio-blake/BLAKE-006.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 7, url: '/Audio-blake/BLAKE-007.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 8, url: '/Audio-blake/BLAKE-008.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 9, url: '/Audio-blake/BLAKE-009.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 10, url: '/Audio-blake/BLAKE-010.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 11, url: '/Audio-blake/BLAKE-011.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 12, url: '/Audio-blake/BLAKE-012.ogg', x: Math.random() * 10 - 5, z: Math.random() * 10 - 5, rotation: (Math.random() * 360 * Math.PI) / 180 }
 ]
 
 const Controls = props => {
@@ -86,7 +100,7 @@ function App() {
           <>
             <Dom position={[10, -5, 0]}>
               <button className="playButton" onClick={onClick}>
-                <code>|> 12XMONO :: David Currie</code>
+                <code>|> Cirrus :: Blake Johnston</code>
               </button>
             </Dom>
             <Dom position={[-1, 2, -1]}>
