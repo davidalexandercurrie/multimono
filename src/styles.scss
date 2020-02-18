@@ -1,5 +1,11 @@
 @import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css);
 /* Specify in CSS */
+
+$primary: #87f1ff;
+$secondary: #af125a;
+$background: #dddddd;
+$background-buttons: #c0f5fa;
+
 code {
   font-family: 'Fira Code', monospace;
 }
@@ -17,14 +23,14 @@ canvas {
   width: 100%;
   padding: 0;
   margin: 0;
-  background: #dddddd;
+  background: $background;
   font-family: 'Fira Code', monospace;
 
   .loading {
     padding: 0.5em;
     font-size: 2em;
     background-color: white;
-    border: solid purple 0.5rem;
+    border: solid $primary 0.5rem;
     font-family: 'Fira Code', monospace;
     color: black;
     text-align: center;
@@ -38,12 +44,12 @@ canvas {
   overflow-y: none;
 }
 .closeControls {
-  border: 2px solid purple;
+  border: 2px solid $primary;
   padding: 5px 10px;
   font-weight: bolder;
   font-size: 1em;
   &:hover {
-    background: purple;
+    background: $primary;
     color: white;
     cursor: cell;
   }
@@ -54,7 +60,7 @@ canvas {
 
 .playButton {
   font-size: 2em;
-  background-color: #e4dcf1; /* Green */
+  background-color: $background-buttons; /* Green */
   border: solid black 0.5rem;
   color: black;
   padding: 15px 32px;
@@ -63,7 +69,7 @@ canvas {
   vertical-align: middle;
   text-align: center;
   &:hover {
-    border: solid green 0.5rem;
+    border: solid $secondary 0.5rem;
   }
   &:active {
     outline: none;
@@ -71,8 +77,8 @@ canvas {
 }
 .title {
   font-size: 2.5em;
-  background-color: #e4dcf1; /* Green */
-  border: solid purple 0.7rem;
+  background-color: $background-buttons; /* Green */
+  border: solid $primary 0.7rem;
   color: black;
   padding: 15px 32px;
   text-decoration: none;
