@@ -101,7 +101,7 @@ function App() {
             <Dom position={[10, -5, 0]}>
               <button className="playButton" onClick={onClick}>
                 {/* <code>|> Cirrus :: Blake Johnston</code> */}
-                <code>|> 12XMONO :: David Currie</code>
+                <code>|> 12XMONO ::::</code>
               </button>
             </Dom>
             <Dom position={[-1, 2, -1]}>
