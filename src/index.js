@@ -4,10 +4,7 @@ import React, { Suspense, useRef, useEffect, useState } from 'react'
 import { Dom, Canvas, extend, useThree, useFrame, useLoader } from 'react-three-fiber'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import ClipLoader from 'react-spinners/ScaleLoader'
-import { FaPlay } from 'react-icons/fa'
 import './styles.css'
-import { TextGeometry } from 'three'
-import { useSpring } from 'react-spring'
 
 extend({ OrbitControls })
 
