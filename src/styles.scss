@@ -53,7 +53,7 @@ canvas {
     color: white;
     cursor: cell;
   }
-  &:active {
+  &:focus {
     outline: none;
   }
 }
@@ -71,9 +71,24 @@ canvas {
   &:hover {
     border: solid $secondary 0.5rem;
   }
-  &:active {
+  &:focus {
     outline: none;
   }
+}
+.control-buttons {
+  font-size: 1.5em;
+  background-color: $background-buttons; /* Green */
+  border: solid $primary 0.7rem;
+  color: black;
+  &:hover {
+    border: solid $secondary 0.5rem;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.hide-buttons {
+  display: none;
 }
 .title {
   font-size: 2.5em;
@@ -85,4 +100,11 @@ canvas {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+}
+
+.transport {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
 }

@@ -60,7 +60,7 @@ canvas .spinner {
   cursor: cell;
 }
 
-.closeControls:active {
+.closeControls:focus {
   outline: none;
 }
 
@@ -81,8 +81,28 @@ canvas .spinner {
   border: solid #af125a 0.5rem;
 }
 
-.playButton:active {
+.playButton:focus {
   outline: none;
+}
+
+.control-buttons {
+  font-size: 1.5em;
+  background-color: #c0f5fa;
+  /* Green */
+  border: solid #87f1ff 0.7rem;
+  color: black;
+}
+
+.control-buttons:hover {
+  border: solid #af125a 0.5rem;
+}
+
+.control-buttons:focus {
+  outline: none;
+}
+
+.hide-buttons {
+  display: none;
 }
 
 .title {
@@ -96,5 +116,12 @@ canvas .spinner {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+}
+
+.transport {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
 }
 /*# sourceMappingURL=styles.css.map */
