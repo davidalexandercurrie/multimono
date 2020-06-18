@@ -139,7 +139,6 @@ function App() {
   }
   const goHome = () => {
     setPlay(false)
-    const { camera } = useThree()
   }
   const closeControls = () => {
     setShowControls(false)
