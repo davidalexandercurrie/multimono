@@ -139,6 +139,7 @@ function App() {
   }
   const goHome = () => {
     setPlay(false)
+    const { camera } = useThree()
   }
   const closeControls = () => {
     setShowControls(false)
@@ -161,6 +162,7 @@ function App() {
           </>
         )}
       </div>
+
       <Canvas camera={{ position: [0, 0, 5] }}>
         {!play && (
           <>
@@ -212,7 +214,7 @@ function App() {
           </Suspense>
         )}
 
-        <Controls autoRotateSpeed={5} autoRotate={play ? false : true} zoomSpeed={0.25} />
+        <Controls autoRotateSpeed={3} autoRotate={play ? false : true} zoomSpeed={0.25} />
       </Canvas>
     </>
   )
