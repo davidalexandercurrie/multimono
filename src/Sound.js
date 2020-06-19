@@ -31,7 +31,7 @@ export default function Sound({ url, node, playAudio }) {
   return (
     <mesh rotation={[0, node.rotation, 0]} key={node.id} position={[node.x, 0, node.z]}>
       <boxBufferGeometry attach="geometry" />
-      <meshPhysicalMaterial ref={ref} attach="material" color="#222222" />
+      <meshPhysicalMaterial ref={ref} attach="material" color="#324353" />
       <positionalAudio ref={sound} args={[listener]} />
     </mesh>
   )
