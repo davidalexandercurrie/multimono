@@ -21,7 +21,7 @@ export default function Sound({ url, node, playAudio }) {
     sound.current.setRefDistance(1)
     sound.current.setLoop(false)
 
-    sound.current.setDirectionalCone(120, 260, 0.3)
+    // sound.current.setDirectionalCone(120, 260, 0.3)
     camera.add(listener)
 
     return () => {

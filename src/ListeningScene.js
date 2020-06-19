@@ -8,7 +8,7 @@ import { Geometry } from 'three'
 
 const Plane = () => (
   <mesh position={[0, -0.5, 0]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
-    <planeBufferGeometry attach="geometry" args={[100, 100]} />
+    <circleBufferGeometry attach="geometry" args={[15, 15]} />
     <meshPhysicalMaterial attach="material" color="#324353" />
   </mesh>
 )
@@ -75,7 +75,7 @@ export default function ListeningScene({ playReady, setPlayReady, piece, setShow
         </Dom>
       )}
       <ambientLight />
-      <fog attach="fog" args={['#324353', 10, 20]} />
+      <fog attach="fog" args={['#324353', 20, 25]} />
       <spotLight
         penumbra={1}
         castShadow
