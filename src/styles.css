@@ -34,6 +34,16 @@ body,
   z-index: -1;
 }
 
+.background-placeholder {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0vw;
+  top: 0vh;
+  z-index: 1;
+}
+
 canvas {
   -webkit-filter: none;
           filter: none;
@@ -55,6 +65,36 @@ canvas {
   font-family: 'Fira Code', monospace;
   color: black;
   text-align: center;
+  -webkit-animation-name: loading;
+          animation-name: loading;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate3d(0.3, 1, 0.6, 0deg);
+            transform: rotate3d(0.3, 1, 0.6, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0.3, 1, 0.6, -360deg);
+            transform: rotate3d(0.3, 1, 0.6, -360deg);
+  }
+}
+
+@keyframes loading {
+  from {
+    -webkit-transform: rotate3d(0.3, 1, 0.6, 0deg);
+            transform: rotate3d(0.3, 1, 0.6, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0.3, 1, 0.6, -360deg);
+            transform: rotate3d(0.3, 1, 0.6, -360deg);
+  }
 }
 
 .spinner {

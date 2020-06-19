@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
 import * as THREE from 'three'
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, Suspense } from 'react'
 import { Dom, Canvas, extend, useThree, useFrame } from 'react-three-fiber'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
@@ -50,6 +50,7 @@ function App() {
   return (
     <>
       <div className="background"></div>
+
       <div className="transport">
         {playReady && play && (
           <>
