@@ -21,16 +21,16 @@ body,
 }
 
 .background {
-  background: url(/background.jpg) no-repeat center center fixed;
-  width: 150vw;
-  height: 150vh;
+  background: url(/background3.jpg) no-repeat center center fixed;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
-  left: -25vw;
-  top: -25vh;
-  -webkit-filter: blur(50px);
-          filter: blur(50px);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  left: 0vw;
+  top: 0vh;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
   z-index: -1;
 }
 

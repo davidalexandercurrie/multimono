@@ -26,14 +26,14 @@ body,
   font-family: 'Fira Code', monospace;
 }
 .background {
-  background: url(/background.jpg) no-repeat center center fixed;
-  width: 150vw;
-  height: 150vh;
+  background: url(/background3.jpg) no-repeat center center fixed;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
-  left: -25vw;
-  top: -25vh;
-  filter: blur(50px);
-  transform: scale(1.1);
+  left: 0vw;
+  top: 0vh;
+  filter: blur(0px);
+  transform: scale(1.4);
   z-index: -1;
 }
 canvas {
