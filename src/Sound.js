@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
 import * as THREE from 'three'
-import { Dom, Canvas, extend, useThree, useFrame, useLoader } from 'react-three-fiber'
+import { useThree, useLoader } from 'react-three-fiber'
+
 export default function Sound({ url, node, playAudio }) {
   const sound = useRef()
   const ref = useRef()
@@ -29,7 +30,7 @@ export default function Sound({ url, node, playAudio }) {
     }
   }, [])
   return (
-    <mesh rotation={[0, node.rotation, 0]} key={node.id} position={[node.x, 0, node.z]}>
+    <mesh castShadow rotation={[0, node.rotation, 0]} key={node.id} position={[node.x, 0, node.z]}>
       <boxBufferGeometry attach="geometry" />
       <meshPhysicalMaterial ref={ref} attach="material" color="#324353" />
       <positionalAudio ref={sound} args={[listener]} />

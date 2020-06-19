@@ -4,6 +4,14 @@ import { Dom } from 'react-three-fiber'
 import Loading from './Loading'
 import Sound from './Sound'
 import './styles.css'
+import { Geometry } from 'three'
+
+const Plane = () => (
+  <mesh position={[0, -0.5, 0]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+    <planeBufferGeometry attach="geometry" args={[100, 100]} />
+    <meshPhysicalMaterial attach="material" color="#324353" />
+  </mesh>
+)
 
 // const tracks = [
 //   { id: 1, url: '/Audio/12xmonobrowser-001.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
@@ -67,10 +75,20 @@ export default function ListeningScene({ playReady, setPlayReady, piece, setShow
         </Dom>
       )}
       <ambientLight />
-      <spotLight castShadow intensity={1} angle={Math.PI / 10} position={[10, 10, 10]} shadow-mapSize-width={2048} shadow-mapSize-height={2048} />
-      <spotLight intensity={0.5} castShadow position={[10, 100, 20]}></spotLight>
+      <fog attach="fog" args={['#324353', 10, 20]} />
+      <spotLight
+        penumbra={1}
+        castShadow
+        intensity={0.1}
+        angle={Math.PI / 10}
+        position={[10, 10, 10]}
+        shadow-mapSize-width={2048}
+        shadow-mapSize-height={2048}
+      />
+      <spotLight penumbra={1} intensity={0.5} castShadow position={[0, 5, 10]}></spotLight>
       <ambientLight />
       <pointLight intensity={4} />
+      <Plane />
       {piece === 'dave' && tracks.map((node) => <Sound url={node.url} node={node} playAudio={playAudio} />)}
       {piece === 'blake' && tracksBlake.map((node) => <Sound url={node.url} node={node} playAudio={playAudio} />)}
     </Suspense>

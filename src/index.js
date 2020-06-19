@@ -33,6 +33,8 @@ function App() {
   const [showControls, setShowControls] = useState(true)
   const [playAudio, setPlayAudio] = useState(false)
   const [piece, setPiece] = useState(false)
+  const [input, setInput] = useState('')
+  const backgroundRef = useRef()
 
   const onClick = (piece) => {
     setPlay(true)
@@ -42,14 +44,19 @@ function App() {
   const goHome = () => {
     setPlay(false)
   }
-
+  // const handleSubmit = () => {
+  //   console.log(backgroundRef)
+  // }
+  // const handleChange = (e) => {
+  //   setInput(e.target.value)
+  // }
   const handlePlayAudio = () => {
     setPlayAudio(!playAudio)
   }
   console.log(playReady, 'playready')
   return (
     <>
-      <div className="background"></div>
+      <div ref={backgroundRef} className="background"></div>
 
       <div className="transport">
         {playReady && play && (
@@ -60,11 +67,24 @@ function App() {
             <button className={`control-buttons ${!playReady ? 'hide-buttons' : ''}`} onClick={handlePlayAudio}>
               {playAudio ? <code>## STOP ##</code> : <code>|> PLAY |></code>}
             </button>
+
+            {/* TODO <form>
+              <label className={`control-buttons ${!playReady ? 'hide-buttons' : ''}`}>
+                Background Image URL:
+                <input onChange={handleChange} value={input} className="url-input" type="text" name="url"></input>
+              </label>
+              <input onSubmit={handleSubmit} className={`control-buttons ${!playReady ? 'hide-buttons' : ''}`} type="submit" value="++" />
+            </form> */}
           </>
         )}
       </div>
 
-      <Canvas camera={{ position: [0, 0, 5] }}>
+      <Canvas
+        camera={{ position: [0, 0, 5] }}
+        onCreated={({ gl }) => {
+          gl.shadowMap.enabled = true
+          gl.shadowMap.type = THREE.PCFSoftShadowMap
+        }}>
         {!play && (
           <>
             <Dom position={[10, -5, 0]}>

@@ -134,7 +134,7 @@ canvas {
 }
 .title {
   font-size: 2.5em;
-  background-color: $background-buttons; /* Green */
+  background-color: $background-buttons;
   border: solid $primary 0.7rem;
   color: black;
   padding: 15px 32px;
@@ -149,4 +149,11 @@ canvas {
   left: 0;
   top: 0;
   z-index: 10;
+}
+.url-input {
+  height: 100%;
+  border: none;
+  &:focus {
+    outline: none;
+  }
 }
