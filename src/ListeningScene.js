@@ -75,7 +75,7 @@ export default function ListeningScene({ playReady, setPlayReady, piece, setShow
         </Dom>
       )}
       <ambientLight />
-      <fog attach="fog" args={['#324353', 20, 25]} />
+      <fog attach="fog" args={['#324398', 8, 15]} />
       <spotLight
         penumbra={1}
         castShadow

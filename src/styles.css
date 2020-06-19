@@ -34,16 +34,6 @@ body,
   z-index: -1;
 }
 
-.background-placeholder {
-  background-color: black;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  left: 0vw;
-  top: 0vh;
-  z-index: 1;
-}
-
 canvas {
   -webkit-filter: none;
           filter: none;

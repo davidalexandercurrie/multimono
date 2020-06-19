@@ -3,6 +3,7 @@ import * as THREE from 'three'
 import React, { useRef, useState, Suspense } from 'react'
 import { Dom, Canvas, extend, useThree, useFrame } from 'react-three-fiber'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import useInputState from './useInputState'
 
 import './styles.css'
 import ListeningScene from './ListeningScene'
@@ -21,6 +22,7 @@ const Controls = (props) => {
       enableDamping
       maxPolarAngle={Math.PI / 2}
       minPolarAngle={Math.PI / 3}
+      maxDistance={15}
       args={[camera, gl.domElement]}
       {...props}
     />
@@ -33,8 +35,8 @@ function App() {
   const [showControls, setShowControls] = useState(true)
   const [playAudio, setPlayAudio] = useState(false)
   const [piece, setPiece] = useState(false)
-  const [input, setInput] = useState('')
-  const backgroundRef = useRef()
+  const [value, handleChange, reset] = useInputState('')
+  const [bgimage, setBgimage] = useState('/background3.jpg')
 
   const onClick = (piece) => {
     setPlay(true)
@@ -44,19 +46,21 @@ function App() {
   const goHome = () => {
     setPlay(false)
   }
-  // const handleSubmit = () => {
-  //   console.log(backgroundRef)
-  // }
-  // const handleChange = (e) => {
-  //   setInput(e.target.value)
-  // }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const string = value
+    setBgimage(string)
+    reset()
+  }
+
   const handlePlayAudio = () => {
     setPlayAudio(!playAudio)
   }
   console.log(playReady, 'playready')
   return (
     <>
-      <div ref={backgroundRef} className="background"></div>
+      <div className="background" style={{ background: `url(${bgimage}) no-repeat center center fixed` }}></div>
 
       <div className="transport">
         {playReady && play && (
@@ -67,15 +71,16 @@ function App() {
             <button className={`control-buttons ${!playReady ? 'hide-buttons' : ''}`} onClick={handlePlayAudio}>
               {playAudio ? <code>## STOP ##</code> : <code>|> PLAY |></code>}
             </button>
-
-            {/* TODO <form>
-              <label className={`control-buttons ${!playReady ? 'hide-buttons' : ''}`}>
-                Background Image URL:
-                <input onChange={handleChange} value={input} className="url-input" type="text" name="url"></input>
-              </label>
-              <input onSubmit={handleSubmit} className={`control-buttons ${!playReady ? 'hide-buttons' : ''}`} type="submit" value="++" />
-            </form> */}
           </>
+        )}
+        {!play && (
+          <form onSubmit={handleSubmit}>
+            <label className={`control-buttons ${playReady ? 'hide-buttons' : ''}`}>
+              Background Image URL:
+              <input onChange={handleChange} value={value} className="url-input" type="text" name="url"></input>
+            </label>
+            <input className={`control-buttons ${playReady ? 'hide-buttons' : ''}`} type="submit" value="++" />
+          </form>
         )}
       </div>
 
