@@ -49,6 +49,7 @@ function App() {
   console.log(playReady, 'playready')
   return (
     <>
+      <div className="background"></div>
       <div className="transport">
         {playReady && play && (
           <>

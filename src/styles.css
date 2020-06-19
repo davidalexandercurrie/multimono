@@ -12,21 +12,42 @@ code {
 
 html,
 body,
-#root,
-canvas {
+#root {
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
-  background: url(/background.jpg) no-repeat center center fixed;
-  background-size: cover;
   font-family: 'Fira Code', monospace;
 }
 
-html .loading,
-body .loading,
-#root .loading,
-canvas .loading {
+.background {
+  background: url(/background.jpg) no-repeat center center fixed;
+  width: 150vw;
+  height: 150vh;
+  position: fixed;
+  left: -25vw;
+  top: -25vh;
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  z-index: -1;
+}
+
+canvas {
+  -webkit-filter: none;
+          filter: none;
+  overflow: auto;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  font-family: 'Fira Code', monospace;
+}
+
+.loading {
   padding: 0.5em;
   font-size: 2em;
   background-color: white;
@@ -36,10 +57,7 @@ canvas .loading {
   text-align: center;
 }
 
-html .spinner,
-body .spinner,
-#root .spinner,
-canvas .spinner {
+.spinner {
   color: white;
 }
 

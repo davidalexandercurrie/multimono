@@ -17,29 +17,49 @@ code {
 }
 html,
 body,
-#root,
-canvas {
+#root {
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
-  background: url(/background.jpg) no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Fira Code', monospace;
 
-  .loading {
-    padding: 0.5em;
-    font-size: 2em;
-    background-color: white;
-    border: solid $primary 0.5rem;
-    font-family: 'Fira Code', monospace;
-    color: black;
-    text-align: center;
-  }
-  .spinner {
-    color: white;
-  }
+  font-family: 'Fira Code', monospace;
 }
+.background {
+  background: url(/background.jpg) no-repeat center center fixed;
+  width: 150vw;
+  height: 150vh;
+  position: fixed;
+  left: -25vw;
+  top: -25vh;
+  filter: blur(50px);
+  transform: scale(1.1);
+  z-index: -1;
+}
+canvas {
+  filter: none;
+  overflow: auto;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  font-family: 'Fira Code', monospace;
+}
+.loading {
+  padding: 0.5em;
+  font-size: 2em;
+  background-color: white;
+  border: solid $primary 0.5rem;
+  font-family: 'Fira Code', monospace;
+  color: black;
+  text-align: center;
+}
+.spinner {
+  color: white;
+}
+
 .controls {
   background: white;
   overflow-y: none;
