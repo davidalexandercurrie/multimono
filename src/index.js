@@ -75,11 +75,11 @@ function App() {
         )}
         {!play && (
           <form onSubmit={handleSubmit}>
-            <label className={`control-buttons ${playReady ? 'hide-buttons' : ''}`}>
+            <label className={`control-buttons `}>
               Background Image URL:
               <input onChange={handleChange} value={value} className="url-input" type="text" name="url"></input>
             </label>
-            <input className={`control-buttons ${playReady ? 'hide-buttons' : ''}`} type="submit" value="++" />
+            <input className={`control-buttons`} type="submit" value="++" />
           </form>
         )}
       </div>
