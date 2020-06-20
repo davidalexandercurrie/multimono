@@ -56,9 +56,9 @@ canvas {
   color: black;
   text-align: center;
   animation-name: loading;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-duration: 6s;
+  animation-duration: 3s;
 }
 @keyframes loading {
   from {

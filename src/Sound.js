@@ -1,16 +1,17 @@
 import React, { useRef, useState, useEffect } from 'react'
 import * as THREE from 'three'
 import { useThree, useLoader } from 'react-three-fiber'
+import { AudioAnalyser } from 'three'
 
 export default function Sound({ url, node, playAudio }) {
   const sound = useRef()
+  const analyzer = useRef()
   const ref = useRef()
   const { camera } = useThree()
   const [listener] = useState(() => new THREE.AudioListener())
   const buffer = useLoader(THREE.AudioLoader, url)
   if (playAudio) {
     sound.current.play()
-    console.log('hi')
   }
   if (sound.current !== undefined && sound.current.isPlaying && !playAudio) {
     sound.current.pause()
@@ -23,7 +24,7 @@ export default function Sound({ url, node, playAudio }) {
 
     // sound.current.setDirectionalCone(120, 260, 0.3)
     camera.add(listener)
-
+    console.log(sound)
     return () => {
       camera.remove(listener)
       sound.current.pause()
@@ -34,6 +35,7 @@ export default function Sound({ url, node, playAudio }) {
       <boxBufferGeometry attach="geometry" />
       <meshPhysicalMaterial ref={ref} attach="material" color="#324353" />
       <positionalAudio ref={sound} args={[listener]} />
+      {/* <AudioAnalyser ref={analyzer} args={[sound.current, 128]} /> */}
     </mesh>
   )
 }
