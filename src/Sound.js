@@ -27,6 +27,7 @@ export default function Sound({ url, node, playAudio }) {
     camera.add(listener)
     return () => {
       camera.remove(listener)
+      sound.current.pause()
     }
   }, [])
 
