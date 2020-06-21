@@ -110,6 +110,15 @@ function App() {
                 <code>|> Scrapes and Sighs :: Alexis Weaver</code>
               </button>
             </Dom>
+            <Dom position={[3, 1, -4]}>
+              <button
+                className="playButton"
+                onClick={() => {
+                  onClick('george')
+                }}>
+                <code>|> Print :: George Johnston</code>
+              </button>
+            </Dom>
             <Dom position={[10, -5, -10]}>
               <button
                 className="playButton"
