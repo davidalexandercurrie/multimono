@@ -101,7 +101,7 @@ function App() {
                 <code>|> 12XMONO :: David Currie</code>
               </button>
             </Dom>
-            <Dom position={[3, -1, 4]}>
+            <Dom position={[3, 1, 4]}>
               <button
                 className="playButton"
                 onClick={() => {
