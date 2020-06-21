@@ -13,20 +13,20 @@ const Plane = () => (
   </mesh>
 )
 
-// const tracks = [
-//   { id: 1, url: '/Audio/12xmonobrowser-001.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-//   { id: 2, url: '/Audio/12xmonobrowser-002.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-//   { id: 3, url: '/Audio/12xmonobrowser-003.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-//   { id: 4, url: '/Audio/12xmonobrowser-004.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-//   { id: 5, url: '/Audio/12xmonobrowser-005.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-//   { id: 6, url: '/Audio/12xmonobrowser-006.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-//   { id: 7, url: '/Audio/12xmonobrowser-007.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-//   { id: 8, url: '/Audio/12xmonobrowser-008.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-//   { id: 9, url: '/Audio/12xmonobrowser-009.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-//   { id: 10, url: '/Audio/12xmonobrowser-010.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-//   { id: 11, url: '/Audio/12xmonobrowser-011.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-//   { id: 12, url: '/Audio/12xmonobrowser-012.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 }
-// ]
+const tracks = [
+  { id: 1, url: '/Audio/12xmonobrowser-001.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 2, url: '/Audio/12xmonobrowser-002.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 3, url: '/Audio/12xmonobrowser-003.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 4, url: '/Audio/12xmonobrowser-004.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 5, url: '/Audio/12xmonobrowser-005.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 6, url: '/Audio/12xmonobrowser-006.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 7, url: '/Audio/12xmonobrowser-007.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 8, url: '/Audio/12xmonobrowser-008.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 9, url: '/Audio/12xmonobrowser-009.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 10, url: '/Audio/12xmonobrowser-010.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 11, url: '/Audio/12xmonobrowser-011.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 12, url: '/Audio/12xmonobrowser-012.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 }
+]
 const tracksBlake = [
   { id: 1, url: '/Audio-blake/BLAKE-001.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
   { id: 2, url: '/Audio-blake/BLAKE-002.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
@@ -153,20 +153,20 @@ const tracksAlexis = [
   },
   { id: 12, url: '/Audio-alexis/alexisweaver-012.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 }
 ]
-const tracks = [
-  { id: 1, url: '/Audio-test/12xmono-001.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 2, url: '/Audio-test/12xmono-002.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 3, url: '/Audio-test/12xmono-003.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 4, url: '/Audio-test/12xmono-004.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 5, url: '/Audio-test/12xmono-005.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 6, url: '/Audio-test/12xmono-006.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 7, url: '/Audio-test/12xmono-007.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 8, url: '/Audio-test/12xmono-008.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 9, url: '/Audio-test/12xmono-009.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 10, url: '/Audio-test/12xmono-010.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 11, url: '/Audio-test/12xmono-011.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
-  { id: 12, url: '/Audio-test/12xmono-012.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 }
-]
+// const tracks = [
+//   { id: 1, url: '/Audio-test/12xmono-001.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 2, url: '/Audio-test/12xmono-002.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 3, url: '/Audio-test/12xmono-003.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 4, url: '/Audio-test/12xmono-004.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 5, url: '/Audio-test/12xmono-005.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 6, url: '/Audio-test/12xmono-006.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 7, url: '/Audio-test/12xmono-007.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 8, url: '/Audio-test/12xmono-008.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 9, url: '/Audio-test/12xmono-009.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 10, url: '/Audio-test/12xmono-010.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 11, url: '/Audio-test/12xmono-011.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+//   { id: 12, url: '/Audio-test/12xmono-012.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 }
+// ]
 const tracksMia = [
   { id: 1, url: '/Audio-mia/1.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
   { id: 2, url: '/Audio-mia/2.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
