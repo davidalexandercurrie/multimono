@@ -22,19 +22,16 @@ export default function Sound({ url, node, playAudio }) {
     sound.current.setBuffer(buffer)
     sound.current.setRefDistance(1)
     sound.current.setLoop(false)
+    sound.current.setVolume(1)
     // sound.current.setDirectionalCone(120, 260, 0.3)
     camera.add(listener)
     return () => {
       camera.remove(listener)
-      sound.current.pause()
     }
   }, [])
-  useEffect(() => {
-    console.log(buffer)
-  }, [buffer])
 
   return (
-    <mesh castShadow rotation={[0, node.rotation, 0]} key={node.id} position={[node.x / 2, 0, node.z / 2]}>
+    <mesh castShadow rotation={[0, node.rotation, 0]} key={node.id} position={[node.x / 1.5, 0, node.z / 1.5]}>
       <boxBufferGeometry attach="geometry" />
       <meshPhysicalMaterial ref={ref} attach="material" color="#324353" />
       <positionalAudio ref={sound} args={[listener]} />

@@ -92,7 +92,7 @@ function App() {
         }}>
         {!play && (
           <>
-            <Dom position={[5, -1, 2]}>
+            <Dom position={[-5, 3, -2]}>
               <button
                 className="playButton"
                 onClick={() => {
