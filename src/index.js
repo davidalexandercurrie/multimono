@@ -92,7 +92,7 @@ function App() {
         }}>
         {!play && (
           <>
-            <Dom position={[10, -5, 0]}>
+            <Dom position={[5, -1, 2]}>
               <button
                 className="playButton"
                 onClick={() => {
@@ -101,7 +101,16 @@ function App() {
                 <code>|> 12XMONO :: David Currie</code>
               </button>
             </Dom>
-            <Dom position={[20, -5, -5]}>
+            <Dom position={[3, -1, 4]}>
+              <button
+                className="playButton"
+                onClick={() => {
+                  onClick('alexis')
+                }}>
+                <code>|> SCRAPES AND SIGHS :: Alexis Weaver</code>
+              </button>
+            </Dom>
+            <Dom position={[10, -5, -10]}>
               <button
                 className="playButton"
                 onClick={() => {

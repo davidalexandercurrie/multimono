@@ -10,6 +10,7 @@ export default function Sound({ url, node, playAudio }) {
   const { camera } = useThree()
   const [listener] = useState(() => new THREE.AudioListener())
   const buffer = useLoader(THREE.AudioLoader, url)
+
   if (playAudio) {
     sound.current.play()
   }
@@ -21,21 +22,23 @@ export default function Sound({ url, node, playAudio }) {
     sound.current.setBuffer(buffer)
     sound.current.setRefDistance(1)
     sound.current.setLoop(false)
-
     // sound.current.setDirectionalCone(120, 260, 0.3)
     camera.add(listener)
-    console.log(sound)
     return () => {
       camera.remove(listener)
       sound.current.pause()
     }
   }, [])
+  useEffect(() => {
+    console.log(buffer)
+  }, [buffer])
+
   return (
     <mesh castShadow rotation={[0, node.rotation, 0]} key={node.id} position={[node.x, 0, node.z]}>
       <boxBufferGeometry attach="geometry" />
       <meshPhysicalMaterial ref={ref} attach="material" color="#324353" />
       <positionalAudio ref={sound} args={[listener]} />
-      {/* <AudioAnalyser ref={analyzer} args={[sound.current, 128]} /> */}
+      {/* {buffer && <AudioAnalyser ref={analyzer} args={[buffer, 32]} />} */}
     </mesh>
   )
 }

@@ -41,6 +41,32 @@ const tracksBlake = [
   { id: 11, url: '/Audio-blake/BLAKE-011.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
   { id: 12, url: '/Audio-blake/BLAKE-012.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 }
 ]
+const tracksAlexis = [
+  { id: 1, url: '/Audio-alexis/alexisweaver-001.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 2, url: '/Audio-alexis/alexisweaver-002.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 3, url: '/Audio-alexis/alexisweaver-003.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 4, url: '/Audio-alexis/alexisweaver-004.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 5, url: '/Audio-alexis/alexisweaver-005.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 6, url: '/Audio-alexis/alexisweaver-006.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 7, url: '/Audio-alexis/alexisweaver-007.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 8, url: '/Audio-alexis/alexisweaver-008.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 9, url: '/Audio-alexis/alexisweaver-009.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  {
+    id: 10,
+    url: '/Audio-alexis/alexisweaver-010.ogg',
+    x: Math.random() * 20 - 10,
+    z: Math.random() * 20 - 10,
+    rotation: (Math.random() * 360 * Math.PI) / 180
+  },
+  {
+    id: 11,
+    url: '/Audio-alexis/alexisweaver-011.ogg',
+    x: Math.random() * 20 - 10,
+    z: Math.random() * 20 - 10,
+    rotation: (Math.random() * 360 * Math.PI) / 180
+  },
+  { id: 12, url: '/Audio-alexis/alexisweaver-012.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 }
+]
 const tracks = [
   { id: 1, url: '/Audio-test/12xmono-001.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
   { id: 2, url: '/Audio-test/12xmono-002.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
@@ -91,6 +117,7 @@ export default function ListeningScene({ playReady, setPlayReady, piece, setShow
       <Plane />
       {piece === 'dave' && tracks.map((node) => <Sound url={node.url} node={node} playAudio={playAudio} />)}
       {piece === 'blake' && tracksBlake.map((node) => <Sound url={node.url} node={node} playAudio={playAudio} />)}
+      {piece === 'alexis' && tracksAlexis.map((node) => <Sound url={node.url} node={node} playAudio={playAudio} />)}
     </Suspense>
   )
 }
