@@ -101,7 +101,16 @@ function App() {
                 <code>|> 12XMONO :: David Currie</code>
               </button>
             </Dom>
-            <Dom position={[3, 1, 4]}>
+            <Dom position={[5, -1, 2]}>
+              <button
+                className="playButton"
+                onClick={() => {
+                  onClick('mia')
+                }}>
+                <code>|> There is a place:: Mia Kelly</code>
+              </button>
+            </Dom>
+            <Dom position={[-3, 1, -4]}>
               <button
                 className="playButton"
                 onClick={() => {

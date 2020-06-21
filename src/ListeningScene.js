@@ -167,6 +167,20 @@ const tracks = [
   { id: 11, url: '/Audio-test/12xmono-011.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
   { id: 12, url: '/Audio-test/12xmono-012.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 }
 ]
+const tracksMia = [
+  { id: 1, url: '/Audio-mia/1.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 2, url: '/Audio-mia/2.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 3, url: '/Audio-mia/3.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 4, url: '/Audio-mia/4.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 5, url: '/Audio-mia/5.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 6, url: '/Audio-mia/6.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 7, url: '/Audio-mia/7.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 8, url: '/Audio-mia/8.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 9, url: '/Audio-mia/9.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 10, url: '/Audio-mia/10.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 11, url: '/Audio-mia/11.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 },
+  { id: 12, url: '/Audio-mia/12.ogg', x: Math.random() * 20 - 10, z: Math.random() * 20 - 10, rotation: (Math.random() * 360 * Math.PI) / 180 }
+]
 
 export default function ListeningScene({ playReady, setPlayReady, piece, setShowControls, showControls, play, playAudio }) {
   console.log('listening SCENE')
@@ -205,6 +219,7 @@ export default function ListeningScene({ playReady, setPlayReady, piece, setShow
       {piece === 'blake' && tracksBlake.map((node) => <Sound url={node.url} node={node} playAudio={playAudio} />)}
       {piece === 'alexis' && tracksAlexis.map((node) => <Sound url={node.url} node={node} playAudio={playAudio} />)}
       {piece === 'george' && tracksGeorge.map((node) => <Sound url={node.url} node={node} playAudio={playAudio} />)}
+      {piece === 'mia' && tracksMia.map((node) => <Sound url={node.url} node={node} playAudio={playAudio} />)}
     </Suspense>
   )
 }
