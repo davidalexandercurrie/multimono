@@ -107,7 +107,7 @@ function App() {
                 onClick={() => {
                   onClick('alexis')
                 }}>
-                <code>|> SCRAPES AND SIGHS :: Alexis Weaver</code>
+                <code>|> Scrapes and Sighs :: Alexis Weaver</code>
               </button>
             </Dom>
             <Dom position={[10, -5, -10]}>
